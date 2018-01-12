@@ -1,0 +1,348 @@
+:root {
+    --site-bg: cornsilk;
+    --site-border: saddlebrown;
+    --main-bg: tan;
+    --bar-color: greenyellow;
+    --text-color: black;
+    --menu-text-color: #ffffff; /* D2FF8C */
+    --link-hover: #9AFF00;
+    --invis: transparent;
+    --modal-bg: rgba(0,0,0,0.5);
+    --shadow: rgba(0,0,0,0.2);
+}
+
+
+body {
+    background-color: var(--site-bg);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 25pt;
+    color: var(--menu-text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-text h1 {
+    font-size: 25pt;
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h2 {
+    font-size: 20pt;
+    color: var(--menu-text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-size: 16pt;
+    color: var(--menu-text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    color: var(--text-color);
+    margin-top: .25em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#nav button {
+    font-size: 16pt;
+    color: var(--menu-text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.main {
+    position: relative;
+    width: 40em;
+    height: 30em;
+    border: 2px solid var(--site-border);
+    box-shadow: 0px 8px 16px 0px var(--shadow);
+    margin: 3em auto;
+}
+
+.main-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: calc(100% - 2em);
+    background-color: var(--bar-color);
+    border-bottom: 2px solid var(--site-border);
+    padding: 1em;
+    z-index: 5;
+}
+
+.main-menu {
+    position: relative;
+    top: 3.75em;
+    padding: .5em;
+    margin-left: .5em;
+    z-index: 6;
+}
+
+.main-menu a {
+    text-decoration: none;
+}
+
+.main-body {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg);
+    z-index: 1;
+}
+
+.main-text {
+    background-color: white;
+    border: solid 2px var(--site-border);
+    padding: .5em;
+    position: absolute;
+    top: 5.75em;
+    left: 1em;
+    right: 1em;
+    bottom: 1em;
+}
+
+.download-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--modal-bg);
+    z-index: 20;
+}
+
+.download-modal-content {
+    display: none;
+    position: relative;
+    margin: 8em auto;
+    border: 2px solid var(--site-border);
+    background: var(--main-bg);
+    width: 38em;
+    height: 15em;
+}
+
+#nav li {
+    position: relative;
+    top: -0.5em;
+}
+
+#nav a {
+    display: block;
+    height: 100%;
+    color: var(--text-color);
+}
+
+#nav a:hover {
+    display: block;
+    color: var(--site-border);
+    background-color: var(--site-bg);
+}
+
+#nav li:hover {
+    background-color: var(--site-bg);
+}
+
+#nav button {
+    border: none;
+    border-bottom: 2px solid var(--site-border);
+    padding: .155em;
+    color: var(--text-color);
+    background-color: var(--main-bg);
+}
+
+#nav button:hover {
+    border: none;
+    border-bottom: 2px solid var(--site-border);
+    cursor: pointer;
+    padding: .155em;
+    color: var(--text-color);
+    background-color: var(--site-bg);
+}
+
+#download-modal ul, li {
+    display: inline-block;
+}
+
+.download-modal-text {
+    position: relative;
+    top: 3em;
+    left: 1em;
+}
+
+#download-close {
+    position: relative;
+    top: .2em;
+    right: -20.6em;
+    cursor: pointer;
+}
+
+#download-close:hover {
+    color: var(--text-color);
+}
+
+
+
+.map-modal-content h3 {
+    display: inline-block;
+}
+
+.right {
+    float: right;
+}
+
+.map-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--modal-bg);
+    z-index: 20;
+}
+
+.modal-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2em;
+    background-color: var(--bar-color);
+    border-bottom: 2px solid var(--site-border);
+}
+
+
+/*.map-modal-content {*/
+    /*position: fixed;*/
+    /*top: 2em;*/
+    /*left: 2em;*/
+    /*right: 2em;*/
+    /*bottom: 2em;*/
+    /*border: 2px solid var(--site-border);*/
+    /*background: white;*/
+    /*-webkit-transition: width 2s ease, height 2s ease;*/
+    /*-moz-transition: width 2s ease, height 2s ease;*/
+    /*-o-transition: width 2s ease, height 2s ease;*/
+    /*transition: width 2s ease, height 2s ease;*/
+/*}*/
+
+#map-modal-content {
+    position: fixed;
+    top: 9em;
+    left: 33%;
+    height: 20em;
+    width: 33%;
+    border: 2px solid var(--site-border);
+    background: white;
+    -webkit-transition: .75s;
+    -moz-transition: .75s;
+    -o-transition: .75s;
+    transition: .75s;
+    /*-webkit-transition: width 2s ease, height 2s ease;*/
+    /*-moz-transition: width 2s ease, height 2s ease;*/
+    /*-o-transition: width 2s ease, height 2s ease;*/
+    /*transition: width 2s ease, height 2s ease;*/
+}
+
+#dynmap {
+    margin-top: 2em;
+    height: calc(100% - 2em);
+    width: 100%;
+}
+
+#map-close {
+    float: right;
+    margin-right: .25em;
+    margin-top: .25em;
+    cursor: pointer;
+    /*position: fixed;*/
+    /*top: 1.65em;*/
+    /*right: 2em;*/
+    /*cursor: pointer;*/
+}
+
+#map-close:hover {
+    color: var(--text-color);
+}
+
+
+.download-div-main {
+    position: absolute;
+    right: 0%;
+    left: 220px;
+    background:#F0F0F0;
+    border: 2px solid var(--site-border);
+    /*width: 70%;*/
+    min-width: 800px;
+    /*margin-right: 40px;*/
+    text-align: left;
+    padding: 25px;
+}
+
+
+.download-div {
+    height: 75px;
+    width: 570px;
+    background-color: var(--site-bg);
+    border: 2px solid var(--site-border);
+    margin-bottom: 1em;
+}
+
+.download-div-info {
+    float: right;
+    height: 50px;
+    width: 475px;
+    margin-top: .45em;
+    padding-left: .5em;
+    padding-top: .5em;
+    margin-right: .5em;
+    border: 1px solid var(--site-border);
+}
+
+#modload-link img {
+    margin: .5em;
+}
+
+#modload-img {
+    margin: .5em;
+}
+
+#modpack-img {
+    margin: .5em;
+}
+
+#lin2 {
+    margin-top: .5em;
+}
+
+.download-div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+    border: 2px solid var(--site-border);
+}
+
+ul {
+    padding-left: 2em;
+}
+
+ol {
+    padding-left: 1em;
+}
+
+#map-modal-content.expand {
+    top: 2em;
+    left: 2em;
+    right: 2em;
+    bottom: 2em;
+    width: calc(100vw - 4em);
+    height: calc(100vh - 4em) ;
+}
