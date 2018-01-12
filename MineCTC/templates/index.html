@@ -1,4 +1,71 @@
 {% extends "layout.html" %}
 {% block body %}
     im here! reload test
+
+    <div class="main">
+        <div class="main-header">
+            <h2>MineCTC: Landing Page</h2>
+        </div>
+        <div class="main-menu">
+            <ul id="nav">
+                <li class="nav"><button type="button" onclick="openModal('download-modal')">DOWNLOADS</button></li>
+                <li class="nav"><button type="button" onclick="openModal('map-modal')">MAP</button></li>
+            </ul>
+        </div>
+        <div class="main-body">
+            <div class="main-text">
+                <h1>Welcome</h1>
+                <p>This is the landing page for the Minecraft server at:
+                    <br>
+                    forge.minectc.com
+                    <br>
+                    The mod-loader and mod-pack can be found above.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="download-modal" class="download-modal" onclick="closeModal('download-modal')">
+        <div id="download-modal-content" class="download-modal-content">
+            <div class="modal-bar">
+                <ul>
+                    <li>
+                        <h3>Downloads</h3>
+                    </li>
+                    <li>
+                        <h3 id="download-close" class="right"><a href="javascript:void(0);" onclick="closeModal('download-modal')"></a><i class="fa fa-times" aria-hidden="true"></i></h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="download-modal-text">
+                <div id="modload" class ="download-div">
+                    <a id="modload-link" href="downloads/forge/forge-1.7.10-10.13.4.1558-1.7.10-installer.jar">
+                        <div class = "download-div-info">
+                            <span id="modload-info">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div id="modpack" class ="download-div">
+                    <a id="modpack-link" href="downloads/mods/MinectcRelease01082017.zip">
+                        <img id="modpack-img" src="img/zip.png">
+                        <div class = "download-div-info">
+                            Mod Pack Download<br>MinectcRelease01082017.zip
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map-modal" class="map-modal" onclick="closeModal('map-modal')">
+        <div id="map-modal-content" class="map-modal-content">
+            <div class="modal-bar">
+                <h3>Dynmap</h3>
+                <h3 id="map-close"><a href="javascript:void(0);" onclick="closeModal('map-modal')"></a><i class="fa fa-times" aria-hidden="true"></i></h3>
+            </div>
+            <iframe id="dynmap" src="https://map.minectc.com">
+            </iframe>
+        </div>
+    </div>
+
+
 {% endblock %}
